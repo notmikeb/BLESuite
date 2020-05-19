@@ -1,0 +1,4 @@
+#!/bin/bash
+
+export PYTHONPATH=$PYHONPATH:`pwd`
+echo PYTHONPATH $PYTHONPATH
