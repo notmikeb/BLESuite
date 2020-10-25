@@ -1,5 +1,11 @@
 # BLESuite README
 
+## Related
+Pybluetooth - use scary to do br scan. work on window python3.7
+Pybtall - pyobex over blues
+Python-bluezero - don't understand ....
+Bluesuite - use scary and work on rpi4b with ubuntu server. work on rpi4b python3.8
+
 ## Overview
 
 
