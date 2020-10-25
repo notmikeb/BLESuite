@@ -45,7 +45,7 @@ def parse_command():
                              'The following are the currently supported commands:\n' +
                              '\n'.join(['\033[1m{}\033[0m: {}'.format(k, v) for k, v in cmd_choices.items()]))
 
-    parser.add_argument('--async', action='store_true', help='\033[1m<read, write>\033[0m '
+    parser.add_argument('--asyncflag', action='store_true', help='\033[1m<read, write>\033[0m '
                                                              'Enable asynchronous writing/reading. Any output'
                                                              'will be displayed when received. This prevents'
                                                              'blocking.')
@@ -198,7 +198,7 @@ def process_args(args):
             print("ERROR: No handles or UUIDs supplied for read operation.")
             return
         print("Reading value from handle or UUID")
-        if args.async:
+        if args.asyncflag:
             uuidData, handleData = ble_service_read_async(args.address[0], args.adapter[0],
                                                           args.address_type[0],
                                                           args.handles, args.uuids,
@@ -235,7 +235,7 @@ def process_args(args):
             print("ERROR: No handles supplied for write operation. Note: Write operation does not support use of UUIDs.")
             return
         print("Writing value to handle")
-        if args.async:
+        if args.asyncflag:
             logger.debug("Async Write")
             if len(args.data) > 0:
                 handleData = ble_service_write_async(args.address[0], args.adapter[0],

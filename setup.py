@@ -28,7 +28,7 @@ setup(
                 'blesuite.cli', 'blesuite.pybt', 'blesuite.replay',
                 'blesuite.replay.btsnoop', 'blesuite.replay.btsnoop.btsnoop', 
                 'blesuite.replay.btsnoop.android','blesuite.replay.btsnoop.bt'],
-    ext_modules = [c_ext],
+    ext_modules = [], # [c_ext] to []
     scripts = ["bin/blesuite", "bin/ble-replay"],
     version = version,
     description = "Python library for communicating with and testing Bluetooth LE devices.",
